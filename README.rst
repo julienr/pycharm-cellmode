@@ -2,7 +2,9 @@ Python cell mode for PyCharm
 ============================
 This provides actions to execute a python "cell" in PyCharm.
 The cell can be sent to either :
+
 1. the internal ipython console
+
 2. an external ipython running in a tmux
 
 Option 2. allows you to have a working interactive matplotlib in an external
