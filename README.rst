@@ -17,7 +17,11 @@ For now, here are some instructions from memory that may be helpful:
 
 Relevant plugin dev links
 -------------------------
+
 http://bjorn.tipling.com/how-to-make-an-intellij-idea-plugin-in-30-minutes
+
 http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+
 https://github.com/JetBrains/intellij-community/blob/1d171c3a1a5fafb82c9a10f8f7b2acd616254f38/python/src/com/jetbrains/python/actions/PyExecuteSelectionAction.java
+
 https://confluence.jetbrains.com/display/IDEADEV/PluginDevelopment
