@@ -3,6 +3,7 @@ import com.intellij.execution.console.LanguageConsoleView;
 import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.ui.RunContentDescriptor;
 import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.module.Module;
@@ -12,8 +13,10 @@ import com.intellij.util.NotNullFunction;
 import com.jetbrains.python.console.PyCodeExecutor;
 import com.jetbrains.python.console.PydevConsoleRunner;
 import com.jetbrains.python.console.RunPythonConsoleAction;
+import org.apache.commons.lang.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.*;
 import java.util.Collection;
 
 
@@ -38,14 +41,88 @@ public class RunCellAction extends AnAction {
         }
     }
 
+    private final Preferences prefs = new Preferences();
+
     @Override
     public void actionPerformed(AnActionEvent e) {
         //System.out.println("RunCellAction");
         Editor editor = CommonDataKeys.EDITOR.getData(e.getDataContext());
         Block block = findBlock(editor);
         if (block != null) {
-            execute(e, block.content);
+            if (prefs.getTargetConsole() == Preferences.TARGET_INTERNAL_CONSOLE) {
+                execute(e, block.content);
+            } else {
+                executeInTmux(prefs.getTmuxSessionName(), block.content);
+            }
             postExecuteHook(editor, block);
+        }
+    }
+
+    private void executeInTmux(String sessionName, String codeText) {
+        String tmuxExec = prefs.getTmuxExecutable();
+        try {
+            File temp = File.createTempFile("pycharm_cellmode", ".py");
+
+            try {
+                writeToFile(temp, codeText);
+                // Use the ipython %load magic
+                runCommand(tmuxExec, "set-buffer", "%load -y " + temp.getAbsolutePath() + "\n");
+                runCommand(tmuxExec, "paste-buffer", "-t", sessionName);
+                // Simulate double enter to scroll through and run loaded code
+                runCommand(tmuxExec, "send-keys", "Enter", "Enter");
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                temp.delete();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void writeToFile(File tempFile, String codeText) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+        writer.write(codeText);
+        // If the file is empty, it seems like tmux load-buffer keep the current
+        // buffer and this cause the last command to be repeated. We do not want that
+        // to happen, so add a dummy string
+        writer.write(" ");
+        writer.close();
+    }
+
+    private String readFully(InputStream stream) {
+        StringBuilder sb = new StringBuilder();
+        try {
+            byte[] buffer = new byte[1024];
+            while (true) {
+                int numRead = stream.read(buffer);
+                if (numRead == -1) {
+                    break;
+                }
+                for (int i = 0; i < numRead; ++i) {
+                    sb.append(buffer[i]);
+                }
+            }
+            return sb.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return sb.toString();
+        }
+    }
+
+    private void runCommand(String... args) throws IOException {
+        ProcessBuilder pb = new ProcessBuilder(args);
+        pb.redirectErrorStream();
+        Process p = pb.start();
+        try {
+            p.waitFor();
+            if (p.exitValue() != 0) {
+                // TODO: Should report as an error to the user. How do we do that ?
+                System.out.println("Error executing " + StringUtils.join(args, " "));
+                System.out.println("Error : " + readFully(p.getInputStream()));
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
