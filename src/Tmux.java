@@ -3,24 +3,25 @@ import org.apache.commons.lang.StringUtils;
 import java.io.*;
 
 public class Tmux {
+    private static Object monitor = new Object();
+
     public static void executeInTmux(Preferences prefs, String codeText) {
         String sessionName = prefs.getTmuxSessionName();
         String tmuxExec = prefs.getTmuxExecutable();
+        String fname = prefs.getTmuxTempFilename();
         try {
-            File temp = File.createTempFile("pycharm_cellmode", ".py");
+            File temp = new File(fname);
 
-            try {
+            // We don't want to have multiple command interleaved
+            synchronized(monitor) {
                 writeToFile(temp, codeText);
                 // Use the ipython %load magic
                 runCommand(tmuxExec, "set-buffer", "%load -y " + temp.getAbsolutePath() + "\n");
                 runCommand(tmuxExec, "paste-buffer", "-t", sessionName);
                 // Simulate double enter to scroll through and run loaded code
                 runCommand(tmuxExec, "send-keys", "Enter", "Enter");
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                temp.delete();
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

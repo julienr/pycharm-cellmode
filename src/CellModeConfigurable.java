@@ -11,6 +11,7 @@ public class CellModeConfigurable implements Configurable {
     private JPanel ipythonOptionsPanel;
     private JPanel targetPanel;
     private JTextField tmuxExecPath;
+    private JTextField tmuxTempFilename;
 
     private final Preferences prefs;
 
@@ -32,6 +33,7 @@ public class CellModeConfigurable implements Configurable {
     public JComponent createComponent() {
         ipythonSessionName.setText(prefs.getTmuxSessionName());
         tmuxExecPath.setText(prefs.getTmuxExecutable());
+        tmuxTempFilename.setText(prefs.getTmuxTempFilename());
         sendInternal.setSelected(prefs.getTargetConsole() == Preferences.TARGET_INTERNAL_CONSOLE);
         sendTmux.setSelected(prefs.getTargetConsole() == Preferences.TARGET_TMUX);
         return (JComponent)targetPanel;
@@ -46,6 +48,7 @@ public class CellModeConfigurable implements Configurable {
     public void apply() throws ConfigurationException {
         prefs.setTmuxSessionName(ipythonSessionName.getText());
         prefs.setTmuxExecutable(tmuxExecPath.getText());
+        prefs.setTmuxTempFilename(tmuxTempFilename.getText());
         if (sendInternal.isSelected()) {
             prefs.setTargetConsole(Preferences.TARGET_INTERNAL_CONSOLE);
         } else {

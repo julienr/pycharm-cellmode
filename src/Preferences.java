@@ -9,6 +9,7 @@ public class Preferences {
 
     private final static String PREF_TMUX_SESSIONNAME = PREFS_PREFIX + "tmux_session";
     private final static String PREF_TMUX_EXECPATH = PREFS_PREFIX + "tmux_path";
+    private final static String PREF_TMUX_TEMPFILE = PREFS_PREFIX + "tmux_tempfile";
 
     private final PropertiesComponent props;
 
@@ -45,6 +46,14 @@ public class Preferences {
 
     public String getTmuxExecutable() {
         return props.getOrInit(PREF_TMUX_EXECPATH, "/usr/bin/tmux");
+    }
+
+    public void setTmuxTempFilename(String fpath) {
+        props.setValue(PREF_TMUX_TEMPFILE, fpath);
+    }
+
+    public String getTmuxTempFilename() {
+        return props.getOrInit(PREF_TMUX_TEMPFILE, "/tmp/pycharm.cellmode.tmux");
     }
 
 
