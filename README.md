@@ -10,6 +10,7 @@ A cell is delimited by ##, for example :
     ##
 
 This plugin provides 3 actions under the Code menu. You can assign keyboard shortcuts to each:
+
 - Run Cell
 - Run Cell and go to next
 - Run Line under the caret
