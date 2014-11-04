@@ -1,17 +1,16 @@
 <idea-plugin version="2">
-  <id>com.yourcompany.unique.plugin.id</id>
-  <name>Plugin display name here</name>
+  <id>net.fhtagn.pycharm.cellmode</id>
+  <name>PyCharm cell mode</name>
   <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="julien@fhtagn.net" url="http://fhtagn.net">Julien Rebetez</vendor>
 
   <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+      Cell mode execution for PyCharm (provides an action to send code between
+      <i>##</i> marks to the python console.
     ]]></description>
 
   <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+      Initial version.
     ]]>
   </change-notes>
 
