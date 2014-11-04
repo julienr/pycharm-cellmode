@@ -13,31 +13,6 @@ import org.jetbrains.annotations.NotNull;
 
 // Note that the console function will change in the next pycharm release (tagged 139 on git)
 public class RunCellAction extends AbstractRunAction {
-    @Override
-    public void actionPerformed(AnActionEvent e) {
-        //System.out.println("RunCellAction");
-        Editor editor = CommonDataKeys.EDITOR.getData(e.getDataContext());
-        Block block = findBlock(editor);
-        if (block != null) {
-            if (prefs.getTargetConsole() == Preferences.TARGET_INTERNAL_CONSOLE) {
-                PythonConsoleUtils.execute(e, block.content);
-            } else {
-                Tmux.executeInTmux(prefs, block.content);
-            }
-            postExecuteHook(editor, block);
-        }
-    }
-
-
-
-    @Override
-    public void update(@NotNull AnActionEvent e) {
-        // Always visible
-        Presentation presentation = e.getPresentation();
-        presentation.setEnabled(true);
-        presentation.setVisible(true);
-    }
-
     /**
      * Finds the current python block (delimited by ##) in which the caret is.
      * @param editor The editor in which to find the block

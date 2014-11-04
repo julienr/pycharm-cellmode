@@ -1,6 +1,10 @@
 import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.CommonDataKeys;
+import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
+import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractRunAction extends AnAction {
     public static class Block {
@@ -13,6 +17,29 @@ public abstract class AbstractRunAction extends AnAction {
             this.lineStart = lineStart;
             this.lineEnd = lineEnd;
         }
+    }
+
+    @Override
+    public void actionPerformed(AnActionEvent e) {
+        //System.out.println("RunCellAction");
+        Editor editor = CommonDataKeys.EDITOR.getData(e.getDataContext());
+        Block block = findBlock(editor);
+        if (block != null) {
+            if (prefs.getTargetConsole() == Preferences.TARGET_INTERNAL_CONSOLE) {
+                PythonConsoleUtils.execute(e, block.content);
+            } else {
+                Tmux.executeInTmux(prefs, block.content);
+            }
+            postExecuteHook(editor, block);
+        }
+    }
+
+    @Override
+    public void update(@NotNull AnActionEvent e) {
+        // Always visible
+        Presentation presentation = e.getPresentation();
+        presentation.setEnabled(true);
+        presentation.setVisible(true);
     }
 
     protected final Preferences prefs = new Preferences();
