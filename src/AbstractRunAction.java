@@ -23,6 +23,10 @@ public abstract class AbstractRunAction extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         //System.out.println("RunCellAction");
         Editor editor = CommonDataKeys.EDITOR.getData(e.getDataContext());
+        if (editor == null) {
+            return;
+        }
+
         Block block = findBlock(editor);
         if (block != null) {
             if (prefs.getTargetConsole() == Preferences.TARGET_INTERNAL_CONSOLE) {

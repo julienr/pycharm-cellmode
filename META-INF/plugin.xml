@@ -46,8 +46,13 @@
       </action>
       <action id="PythonCellMode.RunCell" class="RunCellAction" text="Run _Cell"
               description="Run cell surrounding the cursor in interpreter">
-          <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="UpdateCopyright"/>
+          <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="PythonCellMode.RunCellMoveNext"/>
           <keyboard-shortcut keymap="$default" first-keystroke="ctrl G"/>
+      </action>
+      <action id="PythonCellMode.RunLine" class="RunLineAction" text="Run _Line"
+              description="Run line under the caret">
+          <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="PythonCellMode.RunCell"/>
+          <keyboard-shortcut keymap="$default" first-keystroke="ctrl C"/>
       </action>
   </actions>
 

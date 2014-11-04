@@ -1,6 +1,19 @@
 Python cell mode for PyCharm
 ============================
 This provides actions to execute a python "cell" in PyCharm.
+A cell is delimited by ##, for example :
+
+    ##
+    print 'foo'
+    if True:
+        print 'bar'
+    ##
+
+This plugin provides 3 actions under the Code menu. You can assign keyboard shortcuts to each:
+- Run Cell
+- Run Cell and go to next
+- Run Line under the caret
+
 The cell can be sent to either :
 
 1. the internal ipython console
