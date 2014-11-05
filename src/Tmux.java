@@ -1,3 +1,6 @@
+import com.intellij.notification.EventLog;
+import com.intellij.notification.Notification;
+import com.intellij.openapi.ui.Messages;
 import org.apache.commons.lang.StringUtils;
 
 import java.io.*;
@@ -15,6 +18,8 @@ public class Tmux {
             // We don't want to have multiple command interleaved
             synchronized(monitor) {
                 writeToFile(temp, codeText);
+                // TODO: Check if tmux session exists
+
                 // Use the ipython %load magic
                 runCommand(tmuxExec, "set-buffer", "%load -y " + temp.getAbsolutePath() + "\n");
                 runCommand(tmuxExec, "paste-buffer", "-t", sessionName);
@@ -47,7 +52,7 @@ public class Tmux {
                     break;
                 }
                 for (int i = 0; i < numRead; ++i) {
-                    sb.append(buffer[i]);
+                    sb.append((char)buffer[i]);
                 }
             }
             return sb.toString();
@@ -58,15 +63,26 @@ public class Tmux {
     }
 
     private static void runCommand(String... args) throws IOException {
+        // See http://tomaszdziurko.pl/2011/09/developing-plugin-intellij-idea-some-tips-and-links/
+        // StatusBar statusBar = WindowManager.getInstance()
+        //                       .getStatusBar(DataKeys.PROJECT.getData(actionEvent.getDataContext()));
+        // JBPopupFactory.getInstance()
+        // .createHtmlTextBalloonBuilder(htmlText, messageType, null)
+        //        .setFadeoutTime(7500)
+        //        .createBalloon()
+        //        .show(RelativePoint.getCenterOf(statusBar.getComponent()),
+        //                Balloon.Position.atRight);
         ProcessBuilder pb = new ProcessBuilder(args);
-        pb.redirectErrorStream();
+        pb.redirectErrorStream(true);
         Process p = pb.start();
         try {
             p.waitFor();
             if (p.exitValue() != 0) {
+                String msg = "Error executing " + StringUtils.join(args, " ") + "\n"
+                           + "Error : " + readFully(p.getInputStream());
+                Messages.showErrorDialog(msg, "Python Cell Mode Error");
                 // TODO: Should report as an error to the user. How do we do that ?
-                System.out.println("Error executing " + StringUtils.join(args, " "));
-                System.out.println("Error : " + readFully(p.getInputStream()));
+                System.out.println(msg);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
