@@ -54,6 +54,10 @@
           <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="PythonCellMode.RunCell"/>
           <keyboard-shortcut keymap="$default" first-keystroke="ctrl C"/>
       </action>
+      <action id="PythonCellMode.RunSelection" class="RunSelectionAction" text="Run _Selection"
+              description="Run line under the caret">
+          <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="PythonCellMode.RunLine"/>
+      </action>
   </actions>
 
 </idea-plugin>
