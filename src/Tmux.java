@@ -81,8 +81,6 @@ public class Tmux {
                 String msg = "Error executing " + StringUtils.join(args, " ") + "\n"
                            + "Error : " + readFully(p.getInputStream());
                 Messages.showErrorDialog(msg, "Python Cell Mode Error");
-                // TODO: Should report as an error to the user. How do we do that ?
-                System.out.println(msg);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

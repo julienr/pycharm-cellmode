@@ -1,5 +1,4 @@
-Python cell mode for PyCharm
-============================
+# Python cell mode for PyCharm
 This provides actions to execute a python "cell" in PyCharm.
 A cell is delimited by ##, for example :
 
@@ -17,9 +16,8 @@ This plugin provides 3 actions under the Code menu. You can assign keyboard shor
 
 The cell can be sent to either :
 
-1. the internal ipython console
-
-2. an external ipython running in a tmux
+- the internal ipython console
+- an external ipython running in a tmux
 
 Option 2. allows you to have a working interactive matplotlib in an external
 ipython process.
@@ -29,8 +27,15 @@ the two modes.
 
 Similar to https://github.com/julienr/vim-cellmode
 
-Developing the plugin
-=====================
+## Installation
+
+1. Download [PythonCellMode.jar](https://github.com/julienr/pycharm-cellmode/blob/master/PythonCellMode.jar) 
+2. In PyCharm, go to "Preferences", search for "plugin". Click on "Install from disk" and choose the downloaded jar
+3. Restart PyCharm and use the new actions in the "Code" menu
+4. (optional) Configure keyboard shortcuts by searching for "Cell" in your keymap
+
+## Developing the plugin
+
 For now, here are some instructions from memory that may be helpful:
 (copied from https://github.com/Khan/ka-pycharm-plugin )
 
@@ -40,8 +45,7 @@ For now, here are some instructions from memory that may be helpful:
 4. Make a run configuration from within IntelliJ and run it. If things work, it will launch a fresh PyCharm instance
    with the plugin installed, which you can use for testing.
 
-Relevant plugin dev links
--------------------------
+### Relevant plugin dev links
 
 http://bjorn.tipling.com/how-to-make-an-intellij-idea-plugin-in-30-minutes
 
