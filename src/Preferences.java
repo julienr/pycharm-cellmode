@@ -7,7 +7,7 @@ public class Preferences {
     public final static int TARGET_INTERNAL_CONSOLE = 0;
     public final static int TARGET_TMUX = 1;
 
-    private final static String PREF_TMUX_SESSIONNAME = PREFS_PREFIX + "tmux_session";
+    private final static String PREF_TMUX_TARGET = PREFS_PREFIX + "tmux_target";
     private final static String PREF_TMUX_EXECPATH = PREFS_PREFIX + "tmux_path";
     private final static String PREF_TMUX_TEMPFILE = PREFS_PREFIX + "tmux_tempfile";
 
@@ -32,12 +32,12 @@ public class Preferences {
         return props.getOrInitInt(PREF_TARGET, TARGET_INTERNAL_CONSOLE);
     }
 
-    public void setTmuxSessionName(String sessName) {
-        props.setValue(PREF_TMUX_SESSIONNAME, sessName);
+    public void setTmuxTarget(String target) {
+        props.setValue(PREF_TMUX_TARGET, target);
     }
 
-    public String getTmuxSessionName() {
-        return props.getOrInit(PREF_TMUX_SESSIONNAME, "ipython");
+    public String getTmuxTarget() {
+        return props.getOrInit(PREF_TMUX_TARGET, "$ipython:ipython.0");
     }
 
     public void setTmuxExecutable(String execPath) {

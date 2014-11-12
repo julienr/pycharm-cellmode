@@ -1,5 +1,3 @@
-import com.intellij.notification.EventLog;
-import com.intellij.notification.Notification;
 import com.intellij.openapi.ui.Messages;
 import org.apache.commons.lang.StringUtils;
 
@@ -9,7 +7,7 @@ public class Tmux {
     private static Object monitor = new Object();
 
     public static void executeInTmux(Preferences prefs, String codeText) {
-        String sessionName = prefs.getTmuxSessionName();
+        String target = "\"" + prefs.getTmuxTarget() + "\"";
         String tmuxExec = prefs.getTmuxExecutable();
         String fname = prefs.getTmuxTempFilename();
         try {
@@ -17,14 +15,15 @@ public class Tmux {
 
             // We don't want to have multiple command interleaved
             synchronized(monitor) {
-                writeToFile(temp, codeText);
-                // TODO: Check if tmux session exists
+                // Add end-of-line
+                writeToFile(temp, codeText + "\n");
+                // TODO: Check if tmux target exists
 
                 // Use the ipython %load magic
-                runCommand(tmuxExec, "set-buffer", "%load -y " + temp.getAbsolutePath() + "\n");
-                runCommand(tmuxExec, "paste-buffer", "-t", sessionName);
+                runCommand(tmuxExec, "set-buffer", "\"%load -y " + temp.getAbsolutePath() + "\"\n");
+                runCommand(tmuxExec, "paste-buffer", "-t " + target);
                 // Simulate double enter to scroll through and run loaded code
-                runCommand(tmuxExec, "send-keys", "Enter", "Enter");
+                runCommand(tmuxExec, "send-keys", "-t " + target, "Enter", "Enter");
             }
 
         } catch (IOException e) {
@@ -72,7 +71,20 @@ public class Tmux {
         //        .createBalloon()
         //        .show(RelativePoint.getCenterOf(statusBar.getComponent()),
         //                Balloon.Position.atRight);
-        ProcessBuilder pb = new ProcessBuilder(args);
+        final boolean isUnix = !System.getProperty("os.name").startsWith("Windows");
+
+        ProcessBuilder pb;
+        if (isUnix) {
+            // TODO: For some strange reason, direct execution (without /bin/sh) fails on the -t $sess:win.0 . It seems
+            // that the ".0" at the end gets truncated for whatever reason and tmux doesn't find the session...
+            // encoding or escaping issue ?
+            // So for now, do everything through /bin/sh
+            final String command = StringUtils.join(args, " ");
+            pb = new ProcessBuilder("/bin/sh", "-c", command);
+        } else {
+            pb = new ProcessBuilder(args);
+        }
+
         pb.redirectErrorStream(true);
         Process p = pb.start();
         try {

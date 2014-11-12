@@ -31,7 +31,7 @@ public class CellModeConfigurable implements Configurable {
 
     @Override
     public JComponent createComponent() {
-        ipythonSessionName.setText(prefs.getTmuxSessionName());
+        ipythonSessionName.setText(prefs.getTmuxTarget());
         tmuxExecPath.setText(prefs.getTmuxExecutable());
         tmuxTempFilename.setText(prefs.getTmuxTempFilename());
         sendInternal.setSelected(prefs.getTargetConsole() == Preferences.TARGET_INTERNAL_CONSOLE);
@@ -46,7 +46,7 @@ public class CellModeConfigurable implements Configurable {
 
     @Override
     public void apply() throws ConfigurationException {
-        prefs.setTmuxSessionName(ipythonSessionName.getText());
+        prefs.setTmuxTarget(ipythonSessionName.getText());
         prefs.setTmuxExecutable(tmuxExecPath.getText());
         prefs.setTmuxTempFilename(tmuxTempFilename.getText());
         if (sendInternal.isSelected()) {
@@ -55,7 +55,7 @@ public class CellModeConfigurable implements Configurable {
             prefs.setTargetConsole(Preferences.TARGET_TMUX);
         }
         //System.out.println("target console : " + prefs.getTargetConsole());
-        //System.out.println("tmux exec : " + prefs.getTmuxExecutable() + ", session : " + prefs.getTmuxSessionName());
+        //System.out.println("tmux exec : " + prefs.getTmuxExecutable() + ", session : " + prefs.getTmuxTarget());
     }
 
     @Override

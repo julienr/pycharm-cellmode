@@ -55,7 +55,7 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="tmux ipython session name"/>
+                  <text value="tmux target ($session:window.pane)"/>
                 </properties>
               </component>
               <component id="d6f42" class="javax.swing.JLabel">
