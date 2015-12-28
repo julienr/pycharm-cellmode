@@ -27,15 +27,29 @@ public class RunCellAction extends AbstractRunAction {
         int lineDown = searchForDoubleHash(document, caretLineNumber, 1);
 
         //System.out.println("lineUp : " + lineUp + ", lineDown : " + lineDown);
-        if (lineUp != -1 && lineDown != -1) {
-            int start = document.getLineStartOffset(lineUp + 1);
-            int end = document.getLineEndOffset(lineDown - 1);
-            if (end - start > 0) {
-                CharSequence blockText = document.getCharsSequence().subSequence(start, end);
-                //System.out.println("blockText : " + blockText);
-                return new Block(blockText.toString(), lineUp, lineDown);
-            }
+        int start, end;
+        if (lineUp == -1) {
+            // from top
+            start = 0;
+        } else {
+            // from '##'
+            start = document.getLineStartOffset(lineUp + 1);
         }
+
+        if (lineDown == -1) {
+            // to bottom
+            end = document.getLineEndOffset(document.getLineCount() - 1);
+        } else {
+            // to '##'
+            end = document.getLineEndOffset(lineDown - 1);
+        }
+
+        if (end - start > 0) {
+            CharSequence blockText = document.getCharsSequence().subSequence(start, end);
+            //System.out.println("blockText : " + blockText);
+            return new Block(blockText.toString(), lineUp, lineDown);
+        }
+
         return null;
     }
 

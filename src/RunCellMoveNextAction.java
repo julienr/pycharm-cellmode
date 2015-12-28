@@ -10,6 +10,8 @@ public class RunCellMoveNextAction extends RunCellAction {
     }
 
     private static void moveCaretToLineStart(Editor editor, int line) {
+        if (line == 0)
+            return ;
         Document doc = editor.getDocument();
         if (line < doc.getLineCount()) {
             int newOffset = doc.getLineStartOffset(line);
