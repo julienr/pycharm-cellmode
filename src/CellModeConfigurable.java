@@ -1,5 +1,6 @@
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurationException;
+import com.intellij.ui.IdeBorderFactory;
 
 import javax.swing.*;
 
@@ -12,6 +13,8 @@ public class CellModeConfigurable implements Configurable {
     private JPanel targetPanel;
     private JTextField tmuxExecPath;
     private JTextField tmuxTempFilename;
+    private JPanel consolePanel;
+    private JTextField delimiterRegexp;
 
     private final Preferences prefs;
 
@@ -31,6 +34,9 @@ public class CellModeConfigurable implements Configurable {
 
     @Override
     public JComponent createComponent() {
+        delimiterRegexp.setText(prefs.getDelimiterRegexp());
+        consolePanel.setBorder(IdeBorderFactory.createTitledBorder("Target Python Console", false));
+        ipythonOptionsPanel.setBorder(IdeBorderFactory.createTitledBorder("tmux Options", false));
         ipythonSessionName.setText(prefs.getTmuxTarget());
         tmuxExecPath.setText(prefs.getTmuxExecutable());
         tmuxTempFilename.setText(prefs.getTmuxTempFilename());
@@ -54,6 +60,7 @@ public class CellModeConfigurable implements Configurable {
         } else {
             prefs.setTargetConsole(Preferences.TARGET_TMUX);
         }
+        prefs.setDelimiterRegexp(delimiterRegexp.getText());
         //System.out.println("target console : " + prefs.getTargetConsole());
         //System.out.println("tmux exec : " + prefs.getTmuxExecutable() + ", session : " + prefs.getTmuxTarget());
     }

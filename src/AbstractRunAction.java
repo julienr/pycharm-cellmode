@@ -6,6 +6,9 @@ import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public abstract class AbstractRunAction extends AnAction {
     public static class Block {
         public final String content;
@@ -86,5 +89,36 @@ public abstract class AbstractRunAction extends AnAction {
             }
         }
         return false;
+    }
+
+    /**
+     * Search for delimiter in the direction given (1 to search down, -1 to search up)
+     * @param startLine the line where to start the search
+     * @return the line on which the delimiter was found or -1 if none is found
+     */
+    protected int searchForDelimiter(Document document, int startLine, int direction) {
+        int lineCount = document.getLineCount();
+        CharSequence text = document.getCharsSequence();
+        for (int line = startLine; line >= 0 && line < lineCount; line += direction) {
+            int start = document.getLineStartOffset(line);
+            int end = document.getLineEndOffset(line);
+            if (end - start < 2) {
+                continue;
+            }
+
+            if (matchesDelimiter(text, start, end)) {
+                return line;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Check if the subseq matches the delimiter defined in prefs
+     */
+    protected boolean matchesDelimiter(CharSequence seq, int start, int end) {
+        Pattern pattern = Pattern.compile(prefs.getDelimiterRegexp());
+        Matcher matcher = pattern.matcher(seq.subSequence(start, end));
+        return matcher.matches();
     }
 }

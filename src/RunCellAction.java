@@ -1,7 +1,5 @@
-import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
-import org.jetbrains.annotations.NotNull;
 
 
 // grepcode.com is a good source to search the intellij API
@@ -23,8 +21,8 @@ public class RunCellAction extends AbstractRunAction {
         int docCaretOffset = editor.getCaretModel().getOffset();
         int caretLineNumber = document.getLineNumber(docCaretOffset);
 
-        int lineUp = searchForDoubleHash(document, caretLineNumber, -1);
-        int lineDown = searchForDoubleHash(document, caretLineNumber, 1);
+        int lineUp = searchForDelimiter(document, caretLineNumber, -1);
+        int lineDown = searchForDelimiter(document, caretLineNumber, 1);
 
         //System.out.println("lineUp : " + lineUp + ", lineDown : " + lineDown);
         int start, end;

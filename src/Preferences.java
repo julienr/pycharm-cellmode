@@ -10,6 +10,7 @@ public class Preferences {
     private final static String PREF_TMUX_TARGET = PREFS_PREFIX + "tmux_target";
     private final static String PREF_TMUX_EXECPATH = PREFS_PREFIX + "tmux_path";
     private final static String PREF_TMUX_TEMPFILE = PREFS_PREFIX + "tmux_tempfile";
+    private final static String PREF_DELIMITER_REGEXP = PREFS_PREFIX + "delimiter regexp";
 
     private final PropertiesComponent props;
 
@@ -18,6 +19,14 @@ public class Preferences {
         // TODO : Should make the config per-project. But how do we get current project from here ?
         this.props = PropertiesComponent.getInstance();
         //props.setValue("")
+    }
+
+    public String getDelimiterRegexp() {
+        return props.getValue(PREF_DELIMITER_REGEXP, "^\\s*##.*");
+    }
+
+    public void setDelimiterRegexp(String regexp) {
+        props.setValue(PREF_DELIMITER_REGEXP, regexp);
     }
 
     public void setTargetConsole(int target) {
