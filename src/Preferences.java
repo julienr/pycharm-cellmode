@@ -29,7 +29,7 @@ public class Preferences {
     }
 
     public int getTargetConsole() {
-        return props.getOrInitInt(PREF_TARGET, TARGET_INTERNAL_CONSOLE);
+        return props.getInt(PREF_TARGET, TARGET_INTERNAL_CONSOLE);
     }
 
     public void setTmuxTarget(String target) {
@@ -37,7 +37,7 @@ public class Preferences {
     }
 
     public String getTmuxTarget() {
-        return props.getOrInit(PREF_TMUX_TARGET, "$ipython:ipython.0");
+        return props.getValue(PREF_TMUX_TARGET, "$ipython:ipython.0");
     }
 
     public void setTmuxExecutable(String execPath) {
@@ -45,7 +45,7 @@ public class Preferences {
     }
 
     public String getTmuxExecutable() {
-        return props.getOrInit(PREF_TMUX_EXECPATH, "/usr/bin/tmux");
+        return props.getValue(PREF_TMUX_EXECPATH, "/usr/bin/tmux");
     }
 
     public void setTmuxTempFilename(String fpath) {
@@ -53,7 +53,7 @@ public class Preferences {
     }
 
     public String getTmuxTempFilename() {
-        return props.getOrInit(PREF_TMUX_TEMPFILE, "/tmp/pycharm.cellmode.tmux");
+        return props.getValue(PREF_TMUX_TEMPFILE, "/tmp/pycharm.cellmode.tmux");
     }
 
 
