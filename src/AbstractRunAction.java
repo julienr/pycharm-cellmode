@@ -55,6 +55,10 @@ public abstract class AbstractRunAction extends AnAction {
 
     protected abstract Block findBlock(Editor editor);
 
+    // The pattern defined in preferences (prefs.getDelimiterRegexp). This is a cache to avoid compiling
+    // the pattern on every match
+    private Pattern pattern;
+
     /**
      * Search for ## in the direction given (1 to search down, -1 to search up)
      * @param startLine the line where to start the search
@@ -97,6 +101,12 @@ public abstract class AbstractRunAction extends AnAction {
      * @return the line on which the delimiter was found or -1 if none is found
      */
     protected int searchForDelimiter(Document document, int startLine, int direction) {
+        // Update our pattern cache if the regexp has changed
+        if (pattern == null || pattern.toString() != prefs.getDelimiterRegexp()) {
+            pattern = Pattern.compile(prefs.getDelimiterRegexp());
+            //System.out.println("Compiling new pattern with delimiter : " + prefs.getDelimiterRegexp());
+        }
+
         int lineCount = document.getLineCount();
         CharSequence text = document.getCharsSequence();
         for (int line = startLine; line >= 0 && line < lineCount; line += direction) {
@@ -106,7 +116,7 @@ public abstract class AbstractRunAction extends AnAction {
                 continue;
             }
 
-            if (matchesDelimiter(text, start, end)) {
+            if (matchesDelimiter(pattern, text, start, end)) {
                 return line;
             }
         }
@@ -116,8 +126,7 @@ public abstract class AbstractRunAction extends AnAction {
     /**
      * Check if the subseq matches the delimiter defined in prefs
      */
-    protected boolean matchesDelimiter(CharSequence seq, int start, int end) {
-        Pattern pattern = Pattern.compile(prefs.getDelimiterRegexp());
+    protected boolean matchesDelimiter(Pattern pattern, CharSequence seq, int start, int end) {
         Matcher matcher = pattern.matcher(seq.subSequence(start, end));
         return matcher.matches();
     }
