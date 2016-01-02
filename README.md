@@ -29,6 +29,10 @@ Similar to https://github.com/julienr/vim-cellmode
 
 ## Installation
 
+Install from [jetbrains plugin repository](https://plugins.jetbrains.com/plugin/7858)
+
+Alternatively, you can install directly from the jar :
+
 1. Download [PythonCellMode.jar](https://github.com/julienr/pycharm-cellmode/blob/master/PythonCellMode.jar) 
 2. In PyCharm, go to "Preferences", search for "plugin". Click on "Install from disk" and choose the downloaded jar
 3. Restart PyCharm and use the new actions in the "Code" menu
