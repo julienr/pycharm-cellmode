@@ -40,7 +40,7 @@
   <actions>
     <!-- Add your actions here -->
       <action id="PythonCellMode.RunCellMoveNext" class="RunCellMoveNextAction" text="Run _Cell And Move To Next"
-              description="Run cell surrounding the curser in interpreter and move to next cell">
+              description="Run cell surrounding the cursor in interpreter and move to next cell">
           <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="UpdateCopyright"/>
           <keyboard-shortcut keymap="$default" first-keystroke="ctrl B"/>
       </action>
