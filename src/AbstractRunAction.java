@@ -22,6 +22,10 @@ public abstract class AbstractRunAction extends AnAction {
         }
     }
 
+    AbstractRunAction(String text) {
+        super(text);
+    }
+
     @Override
     public void actionPerformed(AnActionEvent e) {
         //System.out.println("RunCellAction");

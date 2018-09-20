@@ -4,6 +4,16 @@ import com.intellij.openapi.editor.ScrollType;
 
 // Like RunCellAction, but moves to next cell afterwards
 public class RunCellMoveNextAction extends RunCellAction {
+    static private String myText = "Run Cell And Move Next";
+
+    public RunCellMoveNextAction() {
+        super(myText, -1);
+    }
+
+    public RunCellMoveNextAction(int lineNumber) {
+        super(myText, lineNumber);
+    }
+
     @Override
     protected void postExecuteHook(Editor editor, Block block) {
         moveCaretToLineStart(editor, block.lineEnd + 1);

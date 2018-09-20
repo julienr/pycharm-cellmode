@@ -6,6 +6,11 @@ import org.jetbrains.annotations.Nullable;
 
 // Run currently selected text
 public class RunSelectionAction extends AbstractRunAction {
+    static private String myText = "Run Selection";
+
+    RunSelectionAction() {
+        super(myText);
+    }
 
     protected Block findBlock(Editor editor) {
         if (editor.getSelectionModel().hasSelection()) {

@@ -3,6 +3,12 @@ import com.intellij.openapi.editor.Editor;
 
 // Runs the current line under the caret
 public class RunLineAction extends AbstractRunAction {
+    static private String myText = "Run Line";
+
+    RunLineAction() {
+        super(myText);
+    }
+
     @Override
     protected Block findBlock(Editor editor) {
         Document document = editor.getDocument();

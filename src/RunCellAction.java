@@ -11,6 +11,24 @@ import com.intellij.openapi.editor.Editor;
 
 // Note that the console function will change in the next pycharm release (tagged 139 on git)
 public class RunCellAction extends AbstractRunAction {
+    static private String myText = "Run Cell";
+    private int lineNumber;
+
+    public RunCellAction(String text, int lineNumber) {
+        super(text);
+        this.lineNumber = lineNumber;
+    }
+
+    public RunCellAction() {
+        super(myText);
+        this.lineNumber = -1;
+    }
+
+    public RunCellAction(int lineNumber) {
+        super(myText);
+        this.lineNumber = lineNumber;
+    }
+
     /**
      * Finds the current python block (delimited by ##) in which the caret is.
      * @param editor The editor in which to find the block
@@ -18,11 +36,14 @@ public class RunCellAction extends AbstractRunAction {
      */
     protected Block findBlock(Editor editor) {
         Document document = editor.getDocument();
-        int docCaretOffset = editor.getCaretModel().getOffset();
-        int caretLineNumber = document.getLineNumber(docCaretOffset);
+        int caretLineNumber = lineNumber;
+        if (lineNumber == -1) {
+            int docCaretOffset = editor.getCaretModel().getOffset();
+            caretLineNumber = document.getLineNumber(docCaretOffset);
+        }
 
         int lineUp = searchForDelimiter(document, caretLineNumber, -1);
-        int lineDown = searchForDelimiter(document, caretLineNumber, 1);
+        int lineDown = searchForDelimiter(document, caretLineNumber + 1, 1);
 
         //System.out.println("lineUp : " + lineUp + ", lineDown : " + lineDown);
         int start, end;
