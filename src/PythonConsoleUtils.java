@@ -121,7 +121,7 @@ public class PythonConsoleUtils {
                     }
                 }
             });
-            runner.run();
+            runner.run(true);
         }
     }
 

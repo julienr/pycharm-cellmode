@@ -39,25 +39,25 @@
 
   <actions>
     <!-- Add your actions here -->
-      <action id="PythonCellMode.RunCellMoveNext" class="RunCellMoveNextAction" text="Run _Cell And Move To Next"
-              description="Run cell surrounding the cursor in interpreter and move to next cell">
-          <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="UpdateCopyright"/>
-          <keyboard-shortcut keymap="$default" first-keystroke="ctrl B"/>
-      </action>
-      <action id="PythonCellMode.RunCell" class="RunCellAction" text="Run _Cell"
-              description="Run cell surrounding the cursor in interpreter">
-          <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="PythonCellMode.RunCellMoveNext"/>
-          <keyboard-shortcut keymap="$default" first-keystroke="ctrl G"/>
-      </action>
-      <action id="PythonCellMode.RunLine" class="RunLineAction" text="Run _Line"
-              description="Run line under the caret">
-          <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="PythonCellMode.RunCell"/>
-          <keyboard-shortcut keymap="$default" first-keystroke="ctrl C"/>
-      </action>
-      <action id="PythonCellMode.RunSelection" class="RunSelectionAction" text="Run _Selection"
-              description="Run line under the caret">
-          <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="PythonCellMode.RunLine"/>
-      </action>
+    <group id="PythonCellMode.Menu" text="_Cell Mode" description="cell mode" popup="true">
+      <add-to-group group-id="CodeMenu" anchor="last" />
+        <action id="PythonCellMode.RunCellMoveNext" class="RunCellMoveNextAction" text="Run _Cell And Move To Next"
+                description="Run cell surrounding the cursor in interpreter and move to next cell" icon="AllIcons.Actions.Run_anything">
+            <add-to-group group-id="MainToolBar" anchor="last" />
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl B"/>
+        </action>
+        <action id="PythonCellMode.RunCell" class="RunCellAction" text="Run _Cell"
+                description="Run cell surrounding the cursor in interpreter">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl G"/>
+        </action>
+        <action id="PythonCellMode.RunLine" class="RunLineAction" text="Run _Line"
+                description="Run line under the caret">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl C"/>
+        </action>
+        <action id="PythonCellMode.RunSelection" class="RunSelectionAction" text="Run _Selection"
+                description="Run line under the caret">
+        </action>
+    </group>
   </actions>
 
 </idea-plugin>
