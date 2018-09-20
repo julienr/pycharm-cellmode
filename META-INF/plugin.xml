@@ -29,6 +29,7 @@
     <projectConfigurable implementation="CellModeConfigurable"></projectConfigurable>
     <codeInsight.lineMarkerProvider language="Python" implementationClass="PythonCellLineSeparatorProvider"/>
     <runLineMarkerContributor language="Python" implementationClass="PythonCellRunLineMarker"/>
+    <completion.contributor language="Python" implementationClass="PythonConsoleCompletionContributor"/>
   </extensions>
 
   <application-components>
@@ -58,9 +59,6 @@
         </action>
         <action id="PythonCellMode.RunSelection" class="RunSelectionAction" text="Run _Selection"
                 description="Run line under the caret">
-        </action>
-        <action id="PythonCellMode.Complete" class="CompleteAction" text="Code comple_tion" icon="AllIcons.Actions.PreviewDetails">
-          <add-to-group group-id="MainToolBar" anchor="last" />
         </action>
     </group>
   </actions>
