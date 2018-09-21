@@ -39,6 +39,9 @@ public class PythonConsoleCompletion extends CompletionProvider<CompletionParame
         String prefix = element != null ? element.getText().replace(CompletionInitializationContext.DUMMY_IDENTIFIER_TRIMMED, "") : "";
         // System.out.println("statement: " + text + ", prefix: " + prefix);
         List<PydevCompletionVariant> completionVariantList = PythonConsoleUtils.complete(leaf.getProject(), text, prefix);
+        if (completionVariantList == null) {
+            return;
+        }
         for (PydevCompletionVariant completionVariant : completionVariantList) {
             result.addElement(new PythonLookupElement(completionVariant.getName(), false, PythonIcons.Python.PythonConsole));
         }

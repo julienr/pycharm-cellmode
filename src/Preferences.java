@@ -1,5 +1,8 @@
 import com.intellij.ide.util.PropertiesComponent;
 
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
+
 public class Preferences {
     private final static String PREFS_PREFIX = "net.fhtagn.pycharm.cellmode";
 
@@ -11,6 +14,7 @@ public class Preferences {
     private final static String PREF_TMUX_EXECPATH = PREFS_PREFIX + "tmux_path";
     private final static String PREF_TMUX_TEMPFILE = PREFS_PREFIX + "tmux_tempfile";
     private final static String PREF_DELIMITER_REGEXP = PREFS_PREFIX + "delimiter regexp";
+    private final static String PREF_DELIMITER_INSERT = PREFS_PREFIX + "delimiter insert";
 
     private final PropertiesComponent props;
 
@@ -26,7 +30,19 @@ public class Preferences {
     }
 
     public void setDelimiterRegexp(String regexp) {
-        props.setValue(PREF_DELIMITER_REGEXP, regexp);
+        try {
+            Pattern.compile(regexp);
+            props.setValue(PREF_DELIMITER_REGEXP, regexp);
+        } catch (PatternSyntaxException ignored) {
+        }
+    }
+
+    public String getDelimiterInsert() {
+        return props.getValue(PREF_DELIMITER_INSERT, "##");
+    }
+
+    public void setDelimiterInsert(String regexp) {
+        props.setValue(PREF_DELIMITER_INSERT, regexp);
     }
 
     public void setTargetConsole(int target) {

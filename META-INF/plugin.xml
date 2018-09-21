@@ -29,7 +29,7 @@
     <projectConfigurable implementation="CellModeConfigurable"></projectConfigurable>
     <codeInsight.lineMarkerProvider language="Python" implementationClass="PythonCellLineSeparatorProvider"/>
     <runLineMarkerContributor language="Python" implementationClass="PythonCellRunLineMarker"/>
-    <completion.contributor language="Python" implementationClass="PythonConsoleCompletionContributor"/>
+    <completion.contributor language="Python" order="first" implementationClass="PythonConsoleCompletionContributor"/>
   </extensions>
 
   <application-components>

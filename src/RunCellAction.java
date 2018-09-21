@@ -57,7 +57,10 @@ public class RunCellAction extends AbstractRunAction {
 
         if (lineDown == -1) {
             // to bottom
-            end = document.getLineEndOffset(document.getLineCount() - 1);
+            lineDown = document.getLineCount();
+        }
+        if (lineDown == 0) {
+            end = 0;
         } else {
             // to '##'
             end = document.getLineEndOffset(lineDown - 1);

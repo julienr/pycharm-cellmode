@@ -17,6 +17,7 @@ public class CellModeConfigurable implements Configurable {
     private JTextField delimiterRegexp;
     private JPanel delimiterPanel;
     private JPanel keymapPanel;
+    private JTextField delimiterInsert;
 
     private final Preferences prefs;
 
@@ -37,6 +38,7 @@ public class CellModeConfigurable implements Configurable {
     @Override
     public JComponent createComponent() {
         delimiterRegexp.setText(prefs.getDelimiterRegexp());
+        delimiterInsert.setText(prefs.getDelimiterInsert());
         consolePanel.setBorder(IdeBorderFactory.createTitledBorder("Target Python Console", false));
         ipythonOptionsPanel.setBorder(IdeBorderFactory.createTitledBorder("tmux Options", false));
         keymapPanel.setBorder(IdeBorderFactory.createTitledBorder("Keyboard shortcuts", false));
@@ -65,6 +67,7 @@ public class CellModeConfigurable implements Configurable {
             prefs.setTargetConsole(Preferences.TARGET_TMUX);
         }
         prefs.setDelimiterRegexp(delimiterRegexp.getText());
+        prefs.setDelimiterInsert(delimiterInsert.getText());
         //System.out.println("target console : " + prefs.getTargetConsole());
         //System.out.println("tmux exec : " + prefs.getTmuxExecutable() + ", session : " + prefs.getTmuxTarget());
     }

@@ -7,32 +7,28 @@ import com.intellij.psi.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.regex.Pattern;
+
 public class PythonCellRunLineMarker extends RunLineMarkerContributor {
+
+    protected final Preferences prefs = new Preferences();
+
     @Nullable
     @Override
     public Info getInfo(@NotNull PsiElement element) {
         if (element instanceof PsiComment) {
             PsiComment comment = (PsiComment) element;
             String value = comment.getText();
-            if (value != null && value.startsWith("##")) {
-                int lineNumber = getLineNumber(comment);
-                if (lineNumber >= 0) {
-                    return new Info(
-                            AllIcons.RunConfigurations.TestState.Run,
-                            getActions(lineNumber),
-                            (PsiElement e) -> "Run Cell");
-                }
+            Pattern pattern = Pattern.compile(prefs.getDelimiterRegexp());
+            int lineNumber = PythonCellLineSeparatorProvider.getLineNumber(pattern, comment);
+            if (lineNumber >= 0) {
+                return new Info(
+                        AllIcons.RunConfigurations.TestState.Run,
+                        getActions(lineNumber),
+                        (PsiElement e) -> "Run Cell");
             }
         }
         return null;
-    }
-
-    private int getLineNumber(PsiElement element) {
-        Document document = PsiDocumentManager.getInstance(element.getProject()).getDocument(element.getContainingFile());
-        if (document != null) {
-            return document.getLineNumber(element.getTextRange().getStartOffset());
-        }
-        return -1;
     }
 
     private AnAction[] getActions(int lineNumber) {
