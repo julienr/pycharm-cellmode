@@ -23,7 +23,8 @@ public class Tmux {
                 runCommand(tmuxExec, "set-buffer", "\"%load -y " + temp.getAbsolutePath() + "\"\n");
                 runCommand(tmuxExec, "paste-buffer", "-t " + target);
                 // Simulate double enter to scroll through and run loaded code
-                runCommand(tmuxExec, "send-keys", "-t " + target, "Enter", "Enter");
+                runCommand(tmuxExec, "send-keys", "-t " + target, "Enter");
+                runCommand(tmuxExec, "send-keys", "-t " + target, "Enter");
             }
 
         } catch (IOException e) {
