@@ -1,8 +1,8 @@
-<idea-plugin version="2">
+<idea-plugin>
   <id>net.fhtagn.pycharm.cellmode</id>
   <name>PyCharm cell mode</name>
-  <version>1.1</version>
-  <vendor email="julien@fhtagn.net" url="http://fhtagn.net">Julien Rebetez</vendor>
+  <version>1.2</version>
+  <vendor email="julien@fhtagn.net" url="https://github.com/julienr/pycharm-cellmode">Julien Rebetez, clouds56</vendor>
 
   <description><![CDATA[
       Cell mode execution for PyCharm (provides an action to send code between
@@ -15,7 +15,7 @@
   </change-notes>
 
   <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="139"/>
+  <idea-version since-build="182"/>
 
   <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
        on how to target different products -->
