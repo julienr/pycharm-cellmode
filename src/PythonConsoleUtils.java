@@ -140,39 +140,4 @@ public class PythonConsoleUtils {
     private static void executeInConsole(@NotNull PyCodeExecutor codeExecutor, @NotNull String text, Editor editor) {
         codeExecutor.executeCode(text, editor);
     }
-
-    public static List<PydevCompletionVariant> complete(final Project project, final String text, final String actTok) {
-        if (project == null) {
-            return null;
-        }
-
-        Collection<RunContentDescriptor> consoles = getConsoles(project);
-        if (!consoles.isEmpty()) {
-            RunContentDescriptor descriptor = consoles.iterator().next();
-            if (descriptor != null && descriptor.getProcessHandler() instanceof PyConsoleProcessHandler) {
-                PyConsoleProcessHandler processHandler = (PyConsoleProcessHandler) descriptor.getProcessHandler();
-                if (processHandler != null) {
-                    return getCompletionsInConsole(processHandler.getPydevConsoleCommunication(), text, actTok);
-                }
-            }
-        }
-        return null;
-
-    }
-
-    private static List<PydevCompletionVariant> getCompletionsInConsole(@NotNull PydevConsoleCommunication consoleCommunication, @NotNull String text, @NotNull String actTok) {
-        try {
-            List<PydevCompletionVariant> completionVariants = consoleCommunication.getCompletions(text, actTok);
-            // StringBuilder stringBuilder = new StringBuilder();
-            // for (PydevCompletionVariant completionVariant : completionVariants) {
-            //     stringBuilder.append(completionVariant.getName());
-            //     stringBuilder.append(", ");
-            // }
-            // System.out.println("completionVariants: " + completionVariants.size() + ", content: " + stringBuilder.toString());
-            return completionVariants;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }
