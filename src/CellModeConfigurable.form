@@ -124,7 +124,7 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Delimiter regexp"/>
+                  <text value="Regexp whose match will delimit cells"/>
                 </properties>
               </component>
               <component id="60d72" class="javax.swing.JLabel">
@@ -148,7 +148,7 @@
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Delimiter insert"/>
+                  <text value="Delimiter that will be inserted if moving to next cell and there is no next cell"/>
                 </properties>
               </component>
             </children>
