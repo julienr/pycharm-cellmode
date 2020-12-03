@@ -1,6 +1,7 @@
 # Python cell mode for PyCharm
-This provides actions to execute a python "cell" in PyCharm.
-A cell is delimited by ##, for example :
+This plugin provides actions to allow executing Python code using "cells" in PyCharm, much like [Spyder](https://docs.spyder-ide.org/current/editor.html#defining-code-cells).
+
+A "code cell" is a block of lines, typically delimited by `##`, for example:
 
     ##
     print 'foo'
@@ -8,24 +9,26 @@ A cell is delimited by ##, for example :
         print 'bar'
     ##
 
-This plugin provides 3 actions under the Code menu. You can assign keyboard shortcuts to each:
+The plugin options allow you to specify your own regular expression to delimits code cells. 
 
-- Run Cell
-- Run Cell and go to next
+This plugin provides 3 actions under the Code menu, and you can assign keyboard shortcuts to each:
+
+- Run Cell: run the current cell
+- Run Cell and Move Next: run the current cell and advance cursor to next cell
 - Run Line under the caret
+
+When using `Run Cell and Move Next` and there is no next cell, a delimiter (which can be specified in the options, but which is unrelated to the above described regular expression) will be inserted in the source code.
 
 The cell can be sent to either :
 
-- the internal ipython console
-- an external ipython running in a tmux
+- the internal IPython console
+- an external IPython kernel running in a tmux
 
-Option 2. allows you to have a working interactive matplotlib in an external
-ipython process.
+The second option allows you to have a working interactive matplotlib in an external IPython process.
 
-Check the "Python Cell Mode" settings in the preferences to switch between
-the two modes.
+Check the "Python Cell Mode" settings in the preferences to switch between the two modes.
 
-Similar to https://github.com/julienr/vim-cellmode
+This plugin is similar to https://github.com/julienr/vim-cellmode
 
 ## Installation
 
