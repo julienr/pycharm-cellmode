@@ -14,12 +14,15 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 public class PythonCellLineSeparatorProvider implements LineMarkerProvider {
-    private EditorColorsManager colorsManager;
+    private final EditorColorsManager colorsManager;
 
     protected final Preferences prefs = new Preferences();
 
-    public PythonCellLineSeparatorProvider(DaemonCodeAnalyzerSettings daemonSettings, EditorColorsManager colorsManager) {
-        this.colorsManager = colorsManager;
+    private final DaemonCodeAnalyzerSettings daemonSettings;
+
+    public PythonCellLineSeparatorProvider() {
+        this.colorsManager = EditorColorsManager.getInstance();
+        this.daemonSettings = DaemonCodeAnalyzerSettings.getInstance();
     }
 
     @Override
@@ -34,7 +37,7 @@ public class PythonCellLineSeparatorProvider implements LineMarkerProvider {
     }
 
     @Override
-    public void collectSlowLineMarkers(@NotNull List<PsiElement> list, @NotNull Collection<LineMarkerInfo> collection) {
+    public void collectSlowLineMarkers(@NotNull List<? extends PsiElement> list, @NotNull Collection<? super LineMarkerInfo<?>> collection) {
     }
 
     public static int getLineNumber(Pattern pattern, PsiElement element) {
