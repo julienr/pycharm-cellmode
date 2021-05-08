@@ -57,7 +57,8 @@ public class PythonCellLineSeparatorProvider implements LineMarkerProvider {
 
     private LineMarkerInfo<PsiElement> createLineSeparatorByElement(PsiElement element) {
         PsiElement anchor = PsiTreeUtil.getDeepestFirst(element);
-        LineMarkerInfo<PsiElement> lineMarkerInfo = new LineMarkerInfo<PsiElement>(anchor, anchor.getTextRange(), null, Pass.LINE_MARKERS, null, null, GutterIconRenderer.Alignment.RIGHT);
+
+        LineMarkerInfo<PsiElement> lineMarkerInfo = new LineMarkerInfo<PsiElement>(anchor, anchor.getTextRange());
         lineMarkerInfo.separatorColor = colorsManager.getGlobalScheme().getColor(CodeInsightColors.METHOD_SEPARATORS_COLOR);
         lineMarkerInfo.separatorPlacement = SeparatorPlacement.TOP;
         return lineMarkerInfo;

@@ -52,6 +52,17 @@ For now, here are some instructions from memory that may be helpful:
 4. Make a run configuration from within IntelliJ and run it. If things work, it will launch a fresh PyCharm instance
    with the plugin installed, which you can use for testing.
 
+### Dependencies on com.jetbrains.python.console
+
+After just loading the plugin in Intellij, you might have missing dependencies on `com.jetbrains.python.console`.
+
+As explaind on [this page](https://plugins.jetbrains.com/docs/intellij/plugin-dependencies.html?from=DevkitPluginXmlInspection#dependency-declaration-in-pluginxml), what you need
+to do is to manually add 'python-ce' to the classpath of the selected SDK (Pycharm community edition). 
+
+To do so, right click on 'PythonCellMode' -> Open Module Settings and then your SDK should look like this:
+
+![SDK configuration](/images/sdk_configuration.png?raw=true)
+
 ### Relevant plugin dev links
 
 http://bjorn.tipling.com/how-to-make-an-intellij-idea-plugin-in-30-minutes

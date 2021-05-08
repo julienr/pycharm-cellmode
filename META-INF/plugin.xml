@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>net.fhtagn.pycharm.cellmode</id>
   <name>PyCharm cell mode</name>
-  <version>1.2.1</version>
+  <version>1.3.1</version>
   <vendor email="julien@fhtagn.net" url="https://github.com/julienr/pycharm-cellmode">Julien Rebetez, clouds56</vendor>
 
   <description><![CDATA[
@@ -10,12 +10,19 @@
     ]]></description>
 
   <change-notes><![CDATA[
-      Initial version.
+      #1.3.1<br />
+      - Remove deprecated API usage. Target 203.3645.34<br />
+      <br />
+      #1.3.0<br />
+      - Fix issues with Pycharm 2021<br />
+      <br />
+      # 1.2.1<br />
+      - Initial version.
     ]]>
   </change-notes>
 
   <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="182"/>
+  <idea-version since-build="203.3645.34"/>
 
   <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
        on how to target different products -->
