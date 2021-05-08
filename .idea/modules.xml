@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PythonCellMode.iml" filepath="$PROJECT_DIR$/PythonCellMode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PythonCellMode.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PythonCellMode.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PythonCellMode.test.iml" filepath="$PROJECT_DIR$/.idea/modules/PythonCellMode.test.iml" />
     </modules>
   </component>
 </project>
-

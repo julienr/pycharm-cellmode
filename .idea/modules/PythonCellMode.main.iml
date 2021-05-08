@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="PythonCellMode:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="net.fhtagn.pycharm.cellmode" external.system.module.type="sourceSet" external.system.module.version="1.3.0" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" scope="PROVIDED">
+      <library name="Gradle: com.jetbrains:pycharmPY:2021.1">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/annotations-20.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/annotations-java5.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/ap-validation-0.0.5.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/asm-7.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/asm-all-9.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/asm-analysis-7.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/asm-commons-7.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/asm-tree-7.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/asm-util-7.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/automaton-1.12-1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/batik-codec-1.14.0-24.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/batik-transcoder.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/blockmap-1.0.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/bootstrap.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/bouncy-castle-provider.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/byte-buddy-agent-1.10.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/caffeine-2.8.8.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/cglib-nodep-3.2.4.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/classgraph-4.8.102.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/cli-parser-1.1.5.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/cloud-config-client.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-cli-1.4.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-codec-1.15.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-collections-3.2.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-compress-1.20.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-httpclient-3.1-patched.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-imaging-1.0-RC-1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-io-2.8.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-lang3-3.10.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-logging-1.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/commons-net-3.6.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/coverage-common.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/dbus-java-3.2.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/error_prone_annotations-2.3.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/external-system-rt.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/fluent-hc-4.5.13.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/forms-1.1-preview.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/forms_rt.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/grazie-spellchecker-0.1.9.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/groovy-2.5.11.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/groovy-json-2.5.11.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/groovy-jsr223-2.5.11.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/groovy-templates-2.5.11.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/groovy-xml-2.5.11.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/grpc-core.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/grpc-kotlin-stub-1.0.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/grpc-netty-shaded-1.34.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/grpc-protobuf.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/grpc-stub-1.34.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/gson-2.8.6.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/guava.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/h2-mvstore-1.4.200.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/http-client.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/icons.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/icu4j-67.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/imageio-tiff.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/imgscalr-lib-4.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/ini4j-0.5.5-2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/intellij-coverage-agent-1.0.579.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/intellij-deps-fastutil-8.5.2-6.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/intellij-dvcs.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/intellij-test-discovery-agent-1.0.579.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/intellij-xml.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/ion-java-1.6.2-3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/isorelax-20030108.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jackson-core-2.12.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jackson-databind.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jackson-dataformat-yaml-2.12.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jackson-module-kotlin-2.12.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/java-compatibility-1.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/java-string-similarity-1.2.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/java-utils-1.0.6.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/javax.activation-1.2.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/javax.annotation-api-1.3.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jaxb-api-2.3.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jaxb-runtime.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jaxen-1.2.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jcef-87.1.13-g481a82a-chromium-87.0.4280.141-api-1.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jcip-annotations-1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jdom.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jediterm-pty-2.42.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jetCheck-0.2.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jettison-1.4.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jffi-1.2.19.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jffi-1.2.19-native.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jing-20030619.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jna.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jna-platform.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jnr-a64asm-1.0.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jnr-constants-0.9.12.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jnr-enxio-0.21.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jnr-ffi-2.1.10.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jnr-posix-3.0.50.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jnr-unixsocket-0.23.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jnr-x86asm-1.0.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/joni.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jps-model.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jsch-0.1.55.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jsch-agent-proxy.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jsch.agentproxy.jsch-0.0.9.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jsch.agentproxy.sshj-0.0.9.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/json.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jsonpath.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jsoup-1.12.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jsr305-3.0.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jts-io-common.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/junit4.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/junixsocket-core.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/jzlib-1.1.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/kotlin-reflect-1.4.32.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/kotlin-stdlib-jdk8.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/kotlin-test.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/kotlinx-coroutines-jdk8.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/kotlinx-serialization-core-jvm-1.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/kotlinx-serialization-json-jvm-1.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/kryo.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/ktor-websockets-1.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/log4j.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/lz4-java-1.7.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/markdown-0.1.41.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/markdown4j-2.2-cj-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/markdownj-core-0.4.2-SNAPSHOT.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/maven-resolver-provider.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/microba.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/miglayout-swing.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/nanoxml-2.2.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/netty-buffer.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/netty-codec-http.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/netty-handler-proxy.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/ngram-slp-0.0.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/objenesis-3.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/okhttp.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/openapi.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/org.eclipse.lsp4j-0.10.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/org.eclipse.lsp4j.jsonrpc-0.10.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/oro-2.0.8.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/owasp-java-html-sanitizer-20191001.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/platform-api.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/platform-impl.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/platform-objectSerializer-annotations.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/platform-statistics-devkit.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/plexus-utils-3.3.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/protobuf-java-3.13.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/proxy-vole.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/pty4j.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/pycharm.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/rd-core-0.211.234.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/rd-framework-0.211.234.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/rd-swing-0.211.234.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/resources.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/resources_en.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/rhino-runtime-1.7.13.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/rngom-20051226-patched.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/roaringbitmap.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/rocksdbjni-6.15.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/serviceMessages-2019.1.4.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/slf4j.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/snakeyaml-1.27.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/snakeyaml-engine-2.2.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/spellchecker.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/sshj.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/stats.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/stax-api-1.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/streamex-0.7.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/swingx-core-1.6.2-2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/testFramework.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/tips-pycharm-211.2023.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/trang-core.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/trove4j.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/util.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/velocity.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/winp-1.28.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/xercesImpl-2.12.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/xml-apis-ext-1.3.04.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/xml-resolver-1.2.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/xmlbeans-2.6.0.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/xmlrpc-2.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/xstream.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/xz-1.8.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.pycharm/pycharmPY/2021.1/799e28a706b303d50dc84b5054345a05ee5245ce/pycharmPY-2021.1/lib/zip-signer.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2021.1/f4cee111cfce438c15d054c28e24420caa476aa1/ideaIC-2021.1-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.jetbrains:annotations:19.0.0" level="project" />
+  </component>
+</module>
