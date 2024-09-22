@@ -1,3 +1,9 @@
+# Deprecation warning
+
+This plugin is not actively developed anymore and may not work correctly in the latest version of PyCharm.
+
+If anyone wants to take over as a maintainer, I'm happy to archive this repository and redirect to a maintained fork.
+
 # Python cell mode for PyCharm
 This plugin provides actions to allow executing Python code using "cells" in PyCharm, much like [Spyder](https://docs.spyder-ide.org/current/editor.html#defining-code-cells).
 
